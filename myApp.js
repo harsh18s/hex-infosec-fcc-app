@@ -2,7 +2,12 @@ const express = require('express');
 const helmet = require('helmet');
 
 const app = express();
+const bcrypt = require('bcrypt');
 
+
+const saltRounds = 12;
+const myPlaintextPassword = 'sUperpassw0rd!';
+const someOtherPlaintextPassword = 'pass123';
 
 /* app.use(helmet.hidePoweredBy());
 app.use(helmet.frameguard({action: "deny"}));
