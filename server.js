@@ -8,7 +8,7 @@ var app = express();
 app.disable("x-powered-by");
 var fs = require("fs");
 var path = require("path");
-const app = require('./myApp.js');
+const bcrypt = require('bcrypt');
 
 
 const saltRounds = 12;
