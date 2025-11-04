@@ -9,6 +9,11 @@ app.disable("x-powered-by");
 var fs = require("fs");
 var path = require("path");
 const bcrypt = require('bcrypt');
+
+const saltRounds = 12;
+const myPlaintextPassword = 'sUperpassw0rd!';
+const someOtherPlaintextPassword = 'pass123';
+
 app.use(function (req, res, next) {
   res.set({
     "Access-Control-Allow-Origin": "*",
